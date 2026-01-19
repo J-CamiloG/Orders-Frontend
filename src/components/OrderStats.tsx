@@ -3,7 +3,6 @@ import { Order } from '../types/order';
 import { ClipboardList, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function OrderStats({ orders = [] }: { orders: Order[] }) {
-  // Validación de seguridad: nos aseguramos de que siempre sea un array
   const safeOrders = Array.isArray(orders) ? orders : [];
 
   const stats = [

@@ -15,12 +15,12 @@ export default function FileUpload({ onUploadSuccess }: { onUploadSuccess: () =>
     try {
       await importOrders(file);
       toast.success('Archivo importado. Procesando órdenes...');
-      onUploadSuccess(); // Refresca la tabla
+      onUploadSuccess(); 
     } catch (error) {
       toast.error('Error al subir el archivo');
     } finally {
       setLoading(false);
-      e.target.value = ''; // Reset input
+      e.target.value = ''; 
     }
   };
 
